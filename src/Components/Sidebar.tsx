@@ -5,6 +5,7 @@ import { GrPersonalComputer } from "react-icons/gr";
 import { RxDashboard } from "react-icons/rx";
 import { FaBullseye } from "react-icons/fa6";
 import { PiChatsFill } from "react-icons/pi";
+import { useNavigate } from "react-router-dom";
 
 interface MenuItem {
   key: string;
@@ -48,13 +49,15 @@ const initialMenuItems: MenuItem[] = [
 
 const Sidebar: React.FC = () => {
   const [menuItems, setMenuItems] = useState<MenuItem[]>(initialMenuItems);
-
+  const navigate = useNavigate();
   const handleNavigation = (url: string, key: string) => {
     // Update active state
     const updatedMenuItems = menuItems.map((item) =>
       item.key === key ? { ...item, active: true } : { ...item, active: false }
     );
     setMenuItems(updatedMenuItems);
+    //navigate
+    navigate(url);
   };
 
   return (
