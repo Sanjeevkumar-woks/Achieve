@@ -2,9 +2,9 @@ const Tasks = () => {
   const tasks = [];
   return (
     <div className="w-screen h-screen items-center">
-      <p className="text-xl font-bold ml-3 p-2">Tasks</p>
+      <p className="text-2xl font-bold ml-3 p-2">Tasks</p>
 
-      <div className="flex gap-5 h-screen text-center">
+      <div className="flex gap-5 h-screen text-center p-2 mt-5">
         <div className=" flex-1 p-2">
           <p className="p-4 border-b-4 rounded-md border-blue-500 text-lg text-gray-500 font-semibold">
             Active Task
@@ -12,7 +12,7 @@ const Tasks = () => {
           {tasks?.length ? (
             <div></div>
           ) : (
-            <div className=" flex justify-center items-center w-full h-full">
+            <div className=" flex justify-center items-center w-full h-full text-gray-500 font-semibold">
               <p>No Active Tasks</p>
             </div>
           )}
@@ -24,7 +24,7 @@ const Tasks = () => {
           {tasks?.length ? (
             <div></div>
           ) : (
-            <div className=" flex justify-center items-center w-full h-full">
+            <div className=" flex justify-center items-center w-full h-full text-gray-500 font-semibold">
               <p>No Pending Tasks</p>
             </div>
           )}
@@ -36,7 +36,7 @@ const Tasks = () => {
           {tasks?.length ? (
             <div></div>
           ) : (
-            <div className=" flex justify-center items-center w-full h-full">
+            <div className=" flex justify-center items-center w-full h-full text-gray-500 font-semibold">
               <p>Yet to Complete</p>
             </div>
           )}
