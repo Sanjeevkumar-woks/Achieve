@@ -12,7 +12,7 @@ function App() {
     <Router>
       <div className="App flex z-10 ">
         <Sidebar />
-        <div className="flex-1 pl-32 pt-4 z-0 absolute">
+        <div className="flex-1 ml-16  z-0 absolute">
           <Routes>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/class" element={<Class />} />
