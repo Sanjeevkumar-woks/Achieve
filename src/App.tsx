@@ -1,28 +1,30 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./Components/Sidebar";
 import Dashboard from "./Components/Dashboard";
-import Class from "./Components/Class";
+import ClassComponent from "./Components/Class";
 import Tasks from "./Components/Tasks";
 import Projects from "./Components/Projects";
 import Queries from "./Components/Queries";
 
 function App() {
   return (
-    <Router>
-      <div className="App flex z-10 ">
-        <Sidebar />
-        <div className="flex-1 ml-16  z-0 absolute">
+    <BrowserRouter>
+      <div className="relative">
+        <div className="absolute z-20">
+          <Sidebar />
+        </div>
+        <div className="flex-1 ml-16 p-4 relative z-10">
           <Routes>
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/class" element={<Class />} />
+            <Route path="/class" element={<ClassComponent />} />
             <Route path="/tasks" element={<Tasks />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/queries" element={<Queries />} />
           </Routes>
         </div>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
