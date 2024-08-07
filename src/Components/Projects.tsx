@@ -1,2 +1,6 @@
-const Projects = () => <h1 className="font-semibold text-2xl">Projects</h1>;
+const Projects = () => (
+  <div className="p-g bg-green-400">
+    <p>Project</p>
+  </div>
+);
 export default Projects;
